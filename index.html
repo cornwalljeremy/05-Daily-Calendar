@@ -19,6 +19,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/style.css" />
+    
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Work Day Scheduler</title>
   </head>
 
@@ -33,26 +38,96 @@
           border: 2px solid black;
         }
       </style>
+     
     </header>
+     <div id="time" class="time-block"></div>
     <div class="container">
-      <p> Monday </p>
-    <div class="row">
-    </div>
+    <div class="row"></div>
     <div class="input-group input-group-lg">
+      <!-- <--Time-->
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg">6:30AM</span>
+        <span class="input-group-text" id="inputGroup-sizing-lg">6:30 AM</span>
+      </div>
+      <!--calendar input-->
+      <input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <!--SaveButton-->
+      <button class="saveBtn">Save</button>
+    </div>
+    <div class="row"></div>
+    <div class="input-group input-group-lg">
+      <!-- <--Time-->
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">6:15 PM</span>
+      </div>
+      <!--calendar input-->
+      <input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <!--SaveButton-->
+      <button class="saveBtn">Save</button>
+    </div>
+    <div class="row"></div>
+    <div class="input-group input-group-lg">
+      <!-- <--Time-->
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">8:00 PM</span>
+      </div>
+      <!--calendar input-->
+      <input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <!--SaveButton-->
+      <button class="saveBtn">Save</button>
+    </div>
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">8:00 PM</span>
+    </div>
+    <!--calendar input-->
+    <input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    <!--SaveButton-->
+    <button class="saveBtn">Save</button>
+  </div> <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">8:00 PM</span>
+  </div>
+  <!--calendar input-->
+  <input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+  <!--SaveButton-->
+  <button class="saveBtn">Save</button>
+</div> <div class="input-group-prepend">
+  <span class="input-group-text" id="inputGroup-sizing-lg">8:00 PM</span>
+</div>
+<!--calendar input-->
+<input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+<!--SaveButton-->
+<button class="saveBtn">Save</button>
+</div> <div class="input-group-prepend">
+  <span class="input-group-text" id="inputGroup-sizing-lg">8:00 PM</span>
+</div>
+<!--calendar input-->
+<input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+<!--SaveButton-->
+<button class="saveBtn">Save</button>
+</div> <div class="input-group-prepend">
+  <span class="input-group-text" id="inputGroup-sizing-lg">8:00 PM</span>
+</div>
+<!--calendar input-->
+<input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+<!--SaveButton-->
+<button class="saveBtn">Save</button>
+</div> <div class="input-group-prepend">
+  <span class="input-group-text" id="inputGroup-sizing-lg">8:00 PM</span>
+</div>
+<!--calendar input-->
+<input type="text" class="form-control hour-check" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+<!--SaveButton-->
+<button class="saveBtn">Save</button>
+</div>
+    
+    <!-- <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">7:30 AM</span>
       </div>
       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
     </div>
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg">7:30AM</span>
-      </div>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-    </div>
-    <div class="input-group input-group-lg">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-lg">8:30AM</span>
+        <span class="input-group-text" id="inputGroup-sizing-lg">8:30 AM</span>
       </div>
       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
     </div>
@@ -141,13 +216,14 @@
       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
     </div>
     
-      </div>
+      </div> -->
       
       
       <!-- Timeblocks go here -->
-    </div>
+    <!-- </div> -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
