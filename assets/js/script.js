@@ -1,9 +1,8 @@
 var todaysDate = moment().format("LL");
 var todaysTime = moment().format("H");
-// var pastTime = document.querySelector(".past");
-// var nowTime = document.querySelector(".present");
-// var futureTime = document.querySelector(".future");
 var inputGroup = document.getElementsByClassName("input-group-text");
+var textInput = $(".form-control").val();
+var saveButton = $(".saveBtn")
 
 // display the date
 $("#time").text(todaysDate);
@@ -21,19 +20,44 @@ function compareTime() {
     var todaysTime = parseInt(moment().format("H"));
     if (tempTime < todaysTime) {
       $(this).addClass("past");
-      console.log(tempTime, todaysTime);
+    //   console.log(tempTime, todaysTime);
       $(this).removeClass("present future");
-      console.log(tempTime, todaysTime);
+    //   console.log(tempTime, todaysTime);
     } else if (tempTime === todaysTime) {
       $(this).addClass("present");
       $(this).removeClass("past future");
-      console.log(tempTime, todaysTime);
+    //   console.log(tempTime, todaysTime);
     } else {
       $(this).addClass("future");
       $(this).removeClass("present past");
-      console.log(tempTime, todaysTime);
+    //   console.log(tempTime, todaysTime);
     }
   });
 }
+function renderInputText(){
+ textInput = localStorage.getItem("form-control");
+    
+}
+
+// saveButton.addEventListener('click', function(event){
+//     event.preventDefault();
+    // textInput = document.querySelector("#text").value;
+   
+
+//     localStorage.setItem("text")
+//     renderInputText()
+// })
+
+$(saveButton).on("click", function(){
+    textInput = $(this).siblings(".form-control").val();
+    console.log(textInput)
+    inputGroup =  $(this).siblings(".input-group-prepend").children("span").text()
+    console.log(inputGroup)
+    localStorage.setItem(textInput, inputGroup);
+
+})
+
+
 
 compareTime();
+renderInputText();
