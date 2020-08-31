@@ -41,11 +41,22 @@ $(saveButton).on("click", function () {
   //   console.log(textInput);
   inputGroup = $(this).siblings(".input-group-prepend").children("span").text();
   //   console.log(inputGroup);
-  localStorage.setItem("textInput", "inputGroup",JSON.stringify("storedArray")
-  );
-  var data = JSON.parse(localStorage.getItem(textInput, inputGroup));
-  storedArray.push("textInput", "inputGroup");
+  localStorage.setItem(textInput, inputGroup, JSON.stringify("storedArray"));
+    displayPageContent(localStorage.getItem('storedArray'));
 });
 
+// var data = JSON.parse(localStorage.getItem("textInput", "inputGroup"));
+// storedArray.push("textInput", "inputGroup");
+// console.log(data);
+
+function displayContent(storedArray) {
+  storedArray = JSON.parse(localStorage.getItem("textInput", "inputGroup"));
+  storedArray.push("textInput", "inputGroup");
+  console.log(storedArray);
+  if (storedArray > 0) {
+    $("#form-control").html(storedArray.textInput);
+  }
+}
+// displayContent()
 compareTime();
 // renderInputText();
