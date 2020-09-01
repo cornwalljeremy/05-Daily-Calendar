@@ -1,6 +1,6 @@
 var todaysDate = moment().format("LL");
 var todaysTime = moment().format("H");
-var inputGroup = document.getElementsByClassName("input-group-text");
+var inputGroup = $(".input-group-text");
 var textInput = $(".form-control").val();
 var saveButton = $(".saveBtn");
 var storedArray = [];
@@ -33,6 +33,10 @@ function compareTime() {
       $(this).removeClass("present past");
       //   console.log(tempTime, todaysTime);
     }
+    var hour = $(this).siblings(".input-group-prepend").children("span").text();
+    var savedText = localStorage.getItem(hour);
+    $(this).val(savedText);
+    console.log(savedText);
   });
 }
 
@@ -41,22 +45,21 @@ $(saveButton).on("click", function () {
   //   console.log(textInput);
   inputGroup = $(this).siblings(".input-group-prepend").children("span").text();
   //   console.log(inputGroup);
-  localStorage.setItem(textInput, inputGroup, JSON.stringify("storedArray"));
-    displayPageContent(localStorage.getItem('storedArray'));
+  localStorage.setItem(inputGroup, textInput);
 });
 
 // var data = JSON.parse(localStorage.getItem("textInput", "inputGroup"));
 // storedArray.push("textInput", "inputGroup");
 // console.log(data);
 
-function displayContent(storedArray) {
-  storedArray = JSON.parse(localStorage.getItem("textInput", "inputGroup"));
-  storedArray.push("textInput", "inputGroup");
-  console.log(storedArray);
-  if (storedArray > 0) {
-    $("#form-control").html(storedArray.textInput);
-  }
-}
+// function displayContent(storedArray) {
+//   storedArray = JSON.parse(localStorage.getItem("inputGroup", "textInput"));
+//   storedArray.push("textInput", "inputGroup");
+//   console.log(storedArray);
+//   if (storedArray > 0) {
+//     $("#form-control").html(storedArray.textInput);
+//   }
+// }
 // displayContent()
 compareTime();
 // renderInputText();
